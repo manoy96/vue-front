@@ -1,5 +1,27 @@
 <template>
-  <v-app>
+<v-app>
+  
+</v-app>
+
+  <!-- <div id="app">
+      <main-header></main-header>
+
+  <main class="App__main">
+    <transition
+      name="fade"
+      mode="out-in"
+    >
+      <router-view/>
+    </transition>
+  </main>
+
+    <p v-if="['home','about'].includes($route.name)" class="myUser">Hello, {{ userName }}</p>
+    <app-user v-if="['about'].includes($route.name)"></app-user>
+    <main-footer></main-footer>
+  </div> -->
+</template>
+
+  <!-- <v-app>
     <v-toolbar app>
       <v-toolbar-title class="headline text-uppercase">
         <span>Vuetify</span>
@@ -18,8 +40,7 @@
     <v-content>
       <HelloWorld/>
     </v-content>
-  </v-app>
-</template>
+  </v-app> -->
 
 <script>
 import HelloWorld from './components/HelloWorld'
