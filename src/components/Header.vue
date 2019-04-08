@@ -6,9 +6,9 @@
       </v-layout>
 
       <div id="nav">
-        <router-link to="/">Home</router-link>|
-        <router-link to="/rest">REST</router-link>|
-        <router-link to="/graphql">GraphQL</router-link>|
+        <router-link to="/">Home</router-link> |
+        <router-link to="/rest">REST</router-link> |
+        <router-link to="/graphql">GraphQL</router-link>
       </div>
     </v-toolbar>
   </div>
