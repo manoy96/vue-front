@@ -8,10 +8,12 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "apollo-boost": "^0.3.1",
     "axios": "^0.18.0",
     "core-js": "^2.6.5",
+    "graphql": "^14.2.1",
     "vue": "^2.6.6",
-    "vue-apollo": "^3.0.0-beta.11",
+    "vue-apollo": "^3.0.0-beta.28",
     "vuetify": "^1.5.5"
   },
   "devDependencies": {
