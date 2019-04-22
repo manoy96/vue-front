@@ -13,7 +13,6 @@
 
 
 
-
 <v-layout row mt-5 pt-5>
     <v-flex xs12 sm6 offset-sm3>
       <v-card>
@@ -48,7 +47,7 @@
     </v-flex>
   </v-layout>
 
-
+<rocketCard/>
 
 
 
@@ -59,10 +58,13 @@
 </template>
 
 <script>
+import rocketCard from './components/rocketCard'
 
 export default {
   name: "App",
-  components: {},
+  components: {
+    rocketCard,
+  },
    data: () => ({
       show: false
     })
