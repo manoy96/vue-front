@@ -1,28 +1,19 @@
 <template>
   <div>
-    <rocketAll />
-    <rocketCreate />
-    <rocketRestAll />
+    <v-btn color="info" v-on:click="getAllGraphql()">All</v-btn>
+    {{myItem}}
+    error: {{error}}
   </div>
 </template>
 
 <script>
 import gql from "graphql-tag";
-import rocketAll from "./components/rocketAll";
-import rocketCreate from "./components/rocketCreate";
-import rocketRestAll from "./components/rocketRestAll";
-
 export default {
   data() {
     return {
       error: "",
       myItem: {}
     };
-  },
-  components: {
-    rocketAll,
-    rocketCreate,
-    rocketRestAll,
   },
   methods: {
     getAllGraphql: function() {
