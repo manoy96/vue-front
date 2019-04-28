@@ -2,14 +2,17 @@
   <div>
     <rocketAll />
     <rocketCreate />
+    <rocketUpdate />
+    <rocketDelete />
     <rocketRestAll />
   </div>
 </template>
 
 <script>
-import gql from "graphql-tag";
 import rocketAll from "./components/rocketAll";
 import rocketCreate from "./components/rocketCreate";
+import rocketUpdate from "./components/rocketUpdate";
+import rocketDelete from "./components/rocketDelete";
 import rocketRestAll from "./components/rocketRestAll";
 
 export default {
@@ -22,35 +25,11 @@ export default {
   components: {
     rocketAll,
     rocketCreate,
+    rocketUpdate,
+    rocketDelete,
     rocketRestAll,
   },
   methods: {
-    getAllGraphql: function() {
-      this.$apollo
-        .query({
-          query: gql`
-            query allRocket {
-              rockets {
-                name
-                country
-                id
-                cost
-                payloadLeo
-                payloadGto
-                kgLeo
-                kgGto
-                url
-              }
-            }
-          `
-        })
-        .then(res => {
-          this.myItem = res.data;
-        })
-        .catch(err => {
-          this.error = err;
-        });
-    }
   }
 };
 </script>

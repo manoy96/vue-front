@@ -1,14 +1,15 @@
 <template>
   <div class="about">
     <v-container>
+      <h2>Update a Rocket</h2>
       <v-flex xs12>
-        <v-text-field v-model="item.name" label="Rocket Name" required></v-text-field>
+        <v-text-field v-model="item.id" label="id" required></v-text-field>
       </v-flex>
       <v-flex xs12>
-        <v-text-field v-model="item.country" label="Country" required></v-text-field>
+        <v-text-field v-model="item.name" label="Name" required></v-text-field>
       </v-flex>
-      <v-flex xs12>
-        <v-text-field v-model="item.cost" label="Cost" required></v-text-field>
+       <v-flex xs12>
+        <v-text-field v-model="item.country" label="cost" required></v-text-field>
       </v-flex>
       <v-flex xs12>
         <v-text-field v-model="item.payloadLeo" label="Payload to reach Low Earth Orbit" ></v-text-field>
@@ -16,19 +17,18 @@
       <v-flex xs12>
         <v-text-field v-model="item.payloadGto" label="Payload to reach Geostationary transfer orbit" ></v-text-field>
       </v-flex>
-      <v-flex xs12>
+       <v-flex xs12>
         <v-text-field v-model="item.kgLeo" label="Price per KG to reach Low Earth Orbit" ></v-text-field>
       </v-flex>
       <v-flex xs12>
         <v-text-field v-model="item.kgGto" label="Price per KG to reach Geostationary transfer orbit" ></v-text-field>
       </v-flex>
-      <v-flex xs12>
+       <v-flex xs12>
         <v-text-field v-model="item.url" label="Image URL" ></v-text-field>
       </v-flex>
-
-      <v-btn @click="submitCreate()">Create</v-btn>
-      {{error}}
-      {{returnedItem}}
+      <v-btn @click="submitUpdate()">Update item</v-btn>
+      {{ error }}
+      {{ returneditem }}
     </v-container>
   </div>
 </template>
@@ -39,6 +39,7 @@ export default {
   data: () => ({
     error: "",
     item: {
+      id: "",
       name: "",
       country: "",
       cost: "",
@@ -48,14 +49,15 @@ export default {
       kgGto: "",
       url: ""
     },
-    returnedItem: {}
+    returneditem: {}
   }),
   methods: {
-    submitCreate: function() {
+    submitUpdate: function() {
       this.$apollo
         .mutate({
           mutation: gql`
-            mutation addRocket(
+            mutation updateitem(
+              $id: ID
               $name: String!
               $country: String!
               $cost: Int!
@@ -65,18 +67,20 @@ export default {
               $kgGto: Int
               $url: String
             ) {
-              createRocket(
-                data: { 
-                  name: $name, 
-                  country: $country, 
-                  cost: $cost, 
-                  payloadLeo: $payloadLeo, 
-                  payloadGto: $payloadGto, 
-                  kgLeo: $kgLeo,
-                  kgGto: $kgGto,
-                  url: $url 
-                  }
+              updateitem(
+                data: {
+                  name: $name
+                  country: $country
+                  cost: $cost
+                  payloadLeo: $payloadLeo
+                  payloadGto: $payloadGto
+                  kgLeo: $kgLeo
+                  kgGto: $kgGto
+                  url: $url
+                }
+                where: { id: $id }
               ) {
+                id
                 name
                 country
                 cost
@@ -89,6 +93,7 @@ export default {
             }
           `,
           variables: {
+            id: this.item.id,
             name: this.item.name,
             country: this.item.country,
             cost: parseInt(this.item.cost),
@@ -100,7 +105,7 @@ export default {
           }
         })
         .then(res => {
-          this.returnedItem = res.data;
+          this.returneditem = res.data;
         })
         .catch(err => {
           this.error = err;
