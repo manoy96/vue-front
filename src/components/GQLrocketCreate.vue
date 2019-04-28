@@ -1,6 +1,6 @@
 <template>
   <div class="about">
-    <v-container>
+    <v-container xs12 md6 lg6>
       <v-flex xs12>
         <v-text-field v-model="item.name" label="Rocket Name" required></v-text-field>
       </v-flex>

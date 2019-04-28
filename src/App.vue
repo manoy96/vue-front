@@ -1,6 +1,6 @@
 <template>
   <div>
-    <v-container justify-center align-center>
+    <v-container>
       <GQLrocketAll/>
       <GQLrocketCreate/>
       <GQLrocketUpdate/>

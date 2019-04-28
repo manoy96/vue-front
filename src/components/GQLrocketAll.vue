@@ -1,6 +1,6 @@
 <template>
   <div>
-    <v-flex xs12>
+    <v-flex xs12 md6 lg6>
       <v-btn dark color="info" v-on:click="getAllGraphql()">All</v-btn>
     {{myItem}}
     error: {{error}}
