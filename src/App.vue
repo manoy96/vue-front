@@ -1,19 +1,21 @@
 <template>
   <div>
-    <rocketAll />
-    <rocketCreate />
-    <rocketUpdate />
-    <rocketDelete />
-    <rocketRestAll />
+    <v-container justify-center align-center>
+      <GQLrocketAll/>
+      <GQLrocketCreate/>
+      <GQLrocketUpdate/>
+      <GQLrocketDelete/>
+      <!-- <rocketRestAll/> -->
+    </v-container>
   </div>
 </template>
 
 <script>
-import rocketAll from "./components/rocketAll";
-import rocketCreate from "./components/rocketCreate";
-import rocketUpdate from "./components/rocketUpdate";
-import rocketDelete from "./components/rocketDelete";
-import rocketRestAll from "./components/rocketRestAll";
+import GQLrocketAll from "./components/GQLrocketAll";
+import GQLrocketCreate from "./components/GQLrocketCreate";
+import GQLrocketUpdate from "./components/GQLrocketUpdate";
+import GQLrocketDelete from "./components/GQLrocketDelete";
+// import rocketRestAll from "./components/rocketRestAll";
 
 export default {
   data() {
@@ -23,14 +25,13 @@ export default {
     };
   },
   components: {
-    rocketAll,
-    rocketCreate,
-    rocketUpdate,
-    rocketDelete,
-    rocketRestAll,
+    GQLrocketAll,
+    GQLrocketCreate,
+    GQLrocketUpdate,
+    GQLrocketDelete,
+    // rocketRestAll
   },
-  methods: {
-  }
+  methods: {}
 };
 </script>
 

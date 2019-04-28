@@ -1,8 +1,10 @@
 <template>
   <div>
-    <v-btn color="info" v-on:click="getAllGraphql()">All</v-btn>
+    <v-flex xs12>
+      <v-btn dark color="info" v-on:click="getAllGraphql()">All</v-btn>
     {{myItem}}
     error: {{error}}
+    </v-flex>
   </div>
 </template>
 
@@ -22,9 +24,9 @@ export default {
           query: gql`
             query allRocket {
               rockets {
+                id
                 name
                 country
-                id
                 cost
                 payloadLeo
                 payloadGto
