@@ -2,14 +2,14 @@
   <div class="header">
     <v-toolbar color="blue-grey darken-2" app>
       <v-layout justify-start align-center class="pa-2 my-2">
-        <p>Server Practice</p>
+        <v-toolbar-title class="font-weight-regular display-2 white--text">Rockets</v-toolbar-title>
       </v-layout>
 
-      <div id="nav">
+      <!-- <div id="nav">
         <router-link to="/">Home</router-link> |
         <router-link to="/rest">REST</router-link> |
-        <router-link to="/graphql">GraphQL</router-link>
-      </div>
+        <router-link to="/graphql">GraphQL</router-link> -->
+      <!-- </div> -->
     </v-toolbar>
   </div>
 </template>
