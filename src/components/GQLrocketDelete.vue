@@ -24,12 +24,13 @@ export default {
   }),
   methods: {
     submitDelete: function() {
+      console.log(this.item);
       this.$apollo.mutate({
           mutation: gql`
-                mutation deleteitem(
+                mutation removeRocket(
                     $id: ID
                 ) {
-                     deleteitem (where: {
+                     deleteRocket (where: {
                      id: $id 
                      })
                     {

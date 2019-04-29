@@ -9,7 +9,7 @@
         <v-text-field v-model="item.name" label="Name" required></v-text-field>
       </v-flex>
        <v-flex xs12>
-        <v-text-field v-model="item.country" label="cost" required></v-text-field>
+        <v-text-field v-model="item.cost" label="cost" required></v-text-field>
       </v-flex>
       <v-flex xs12>
         <v-text-field v-model="item.payloadLeo" label="Payload to reach Low Earth Orbit" ></v-text-field>
@@ -53,6 +53,7 @@ export default {
   }),
   methods: {
     submitUpdate: function() {
+      console.log(this.item);
       this.$apollo
         .mutate({
           mutation: gql`
@@ -67,7 +68,7 @@ export default {
               $kgGto: Int
               $url: String
             ) {
-              updateitem(
+              updateRocket(
                 data: {
                   name: $name
                   country: $country
