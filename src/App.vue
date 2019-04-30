@@ -8,6 +8,7 @@
       <v-tab ripple>GQL Update Rockdet</v-tab>
       <v-tab ripple>GQL Delete Rocket</v-tab>
       <v-tab ripple>REST Show All</v-tab>
+      <v-tab ripple>REST Create Rocket</v-tab>
       <v-tab-item>
         <v-card flat>
           <v-card-text><display /></v-card-text>
@@ -31,6 +32,12 @@
       <v-tab-item>
         <v-card flat>
           <v-card-text><RESTrocketAll /></v-card-text>
+        </v-card>
+      </v-tab-item>
+      <v-tab-item>
+        <v-card flat>
+          <v-card-text></v-card-text>
+          <RESTrocketCreate />
         </v-card>
       </v-tab-item>
     </v-tabs>
@@ -85,6 +92,9 @@ import GQLrocketUpdate from "./components/GQLrocketUpdate";
 import GQLrocketDelete from "./components/GQLrocketDelete";
 
 import RESTrocketAll from "./components/RESTrocketAll";
+import RESTrocketCreate from "./components/RESTrocketCreate";
+import RESTrocketDelete from "./components/RESTrocketDelete";
+
 export default {
   data() {
     return {
@@ -101,7 +111,8 @@ export default {
     GQLrocketDelete,
     display,
 
-    RESTrocketAll
+    RESTrocketAll,
+    RESTrocketCreate
   },
   methods: {}
 };

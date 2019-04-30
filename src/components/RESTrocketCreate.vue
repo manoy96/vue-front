@@ -1,26 +1,23 @@
 <template>
   <div>
     <v-container>
-      <v-card>
+      <v-card class="pa-3" dark>
         <h1>Create a RESTful rocket</h1>
-        <v-layout row wrap>
-          <v-flex xs4>
+        <v-layout column >
+          <v-flex>
             <v-text-field v-model="name" label="Name" required></v-text-field>
           </v-flex>
-          <v-flex xs4>
-            <v-text-field v-model="description" label="Description" required></v-text-field>
+          <v-flex>
+            <v-text-field v-model="country" label="Country" required></v-text-field>
           </v-flex>
-          <v-flex xs4>
-            <v-text-field v-model="url" label="URL" required></v-text-field>
+          <v-flex>
+            <v-text-field v-model="price" label="Cost" ></v-text-field>
           </v-flex>
-          <v-flex xs4>
-            <v-text-field v-model="emotion" label="Emotion" required></v-text-field>
-          </v-flex>
-          <v-flex xs4>
-            <v-text-field v-model="genus" label="Genus" required></v-text-field>
+          <v-flex >
+            <v-text-field v-model="company" label="Company" ></v-text-field>
           </v-flex>
         </v-layout>
-        <v-btn @click="createrocket" color="info">Create</v-btn>
+        <v-btn @click="createRocket" color="info">Create Rocket</v-btn>
       </v-card>
     </v-container>
   </div>
@@ -32,23 +29,23 @@ export default {
   data() {
     return {
       name: "",
-      description: "",
-      url: "",
-      emotion: "",
-      genus: ""
+      country: "",
+      price: "",
+      company: "",
     };
   },
   methods: {
-    createrocket() {
-      const rocket = {
+    createRocket() {
+      const rocketData = {
         name: this.item.name,
         country: this.item.country,
-        price: parseInt(this.item.price)
+        price: parseInt(this.item.price),
+        company: this.item.company
       };
       console.log(rocketData);
       axios
         .post(
-          "https://floating-temple-55389.herokuapp.com/rockets/create",
+          "https://sleepy-taiga-70117.herokuapp.com/products/create",
           rocketData
         )
         .then(res => {

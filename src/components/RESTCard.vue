@@ -1,5 +1,5 @@
 <template>
-  <v-card flat tile style="padding-left:5px; padding-right: 5px;">
+  <v-card dark flat tile style="padding-left:5px; padding-right: 5px;">
     <v-card-title primary-title>
       <div>
         <h3 class="headline mb-0">{{rocket.name}}</h3>
