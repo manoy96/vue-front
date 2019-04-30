@@ -32,6 +32,7 @@ export default {
       country: "",
       price: "",
       company: "",
+      result: "test"
     };
   },
   methods: {

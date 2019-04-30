@@ -1,30 +1,27 @@
-# vue-front
+# Vue-front
 
 ## Project setup
 ```
 npm install
 ```
 
-### Compiles and hot-reloads for development
+### Clone GraphQL Server
+```
+git clone https://github.com/manoy96/graphql-server-final.git
+cd graphql-server-final
+```
+
+### Bootup GraphQL server
+```
+npm run dockerStart
+npm run deploy
+npm run seed
+npm start
+```
+
+### Now CD into your Vue-front Project
+### Run Vue App
 ```
 npm run serve
 ```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Run your tests
-```
-npm run test
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
-# vue-front
+[View on localhost:8080](localhost:8080)

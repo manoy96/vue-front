@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Header />
+    <Header/>
 
     <v-tabs dark slider-color="red">
       <v-tab ripple>GQL Show All</v-tab>
@@ -9,78 +9,65 @@
       <v-tab ripple>GQL Delete Rocket</v-tab>
       <v-tab ripple>REST Show All</v-tab>
       <v-tab ripple>REST Create Rocket</v-tab>
+      <v-tab ripple>REST Delete Rocket</v-tab>
+      <v-tab ripple>REST Update Rocket</v-tab>
+
       <v-tab-item>
         <v-card flat>
-          <v-card-text><display /></v-card-text>
+          <v-card-text>
+            <display/>
+          </v-card-text>
         </v-card>
       </v-tab-item>
       <v-tab-item>
         <v-card flat>
-          <v-card-text><GQLrocketCreate class="mt-5"/></v-card-text>
+          <v-card-text>
+            <GQLrocketCreate class="mt-5"/>
+          </v-card-text>
         </v-card>
       </v-tab-item>
       <v-tab-item>
         <v-card flat>
-          <v-card-text><GQLrocketUpdate/></v-card-text>
+          <v-card-text>
+            <GQLrocketUpdate/>
+          </v-card-text>
         </v-card>
       </v-tab-item>
       <v-tab-item>
         <v-card flat>
-          <v-card-text><GQLrocketDelete/></v-card-text>
+          <v-card-text>
+            <GQLrocketDelete/>
+          </v-card-text>
         </v-card>
       </v-tab-item>
       <v-tab-item>
         <v-card flat>
-          <v-card-text><RESTrocketAll /></v-card-text>
+          <v-card-text>
+            <RESTrocketAll/>
+          </v-card-text>
         </v-card>
       </v-tab-item>
       <v-tab-item>
         <v-card flat>
           <v-card-text></v-card-text>
-          <RESTrocketCreate />
+          <RESTrocketCreate/>
         </v-card>
       </v-tab-item>
+      <v-tab-item>
+        <v-card flat>
+          <v-card-text></v-card-text>
+          <RESTrocketUpdate/>
+        </v-card>
+      </v-tab-item>
+      <v-tab-item>
+        <v-card flat>
+          <v-card-text></v-card-text>
+          <RESTrocketDelete/>
+        </v-card>
+      </v-tab-item>
+      
     </v-tabs>
   </div>
-
-  <!-- <v-container>
-    <v-tabs dark dark slider-color="yellow" >
-      <v-tab ripple>Show All</v-tab>
-      <v-tab ripple>Create Rocket</v-tab>
-      <v-tab ripple>Update Rockdet</v-tab>
-      <v-tab ripple>Delete Rocket</v-tab>
-      <v-tab-item>
-        <v-card flat>
-          <v-card-text><display /></v-card-text>
-        </v-card>
-      </v-tab-item>
-      <v-tab-item>
-        <v-card flat>
-          <v-card-text><GQLrocketCreate class="mt-5"/></v-card-text>
-        </v-card>
-      </v-tab-item>
-      <v-tab-item>
-        <v-card flat>
-          <v-card-text><GQLrocketUpdate/></v-card-text>
-        </v-card>
-      </v-tab-item>
-      <v-tab-item>
-        <v-card flat>
-          <v-card-text><GQLrocketDelete/></v-card-text>
-        </v-card>
-      </v-tab-item>
-    </v-tabs>
-  </v-container>-->
-
-  <!-- <v-container>
-      <Header />
-      <GQLrocketCreate class="mt-5"/>
-      <GQLrocketUpdate/>
-      <GQLrocketDelete/>
-      <display />
-
-      <RESTrocketAll />
-  </v-container>-->
 </template>
 
 <script>
@@ -98,7 +85,7 @@ import RESTrocketDelete from "./components/RESTrocketDelete";
 export default {
   data() {
     return {
-      model: 'tab-2',
+      model: "tab-2",
       error: "",
       myItem: {}
     };
@@ -112,7 +99,8 @@ export default {
     display,
 
     RESTrocketAll,
-    RESTrocketCreate
+    RESTrocketCreate,
+    RESTrocketDelete
   },
   methods: {}
 };
