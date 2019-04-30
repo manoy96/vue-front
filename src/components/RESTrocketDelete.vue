@@ -1,7 +1,7 @@
 <template>
   <div>
     <v-container>
-      <v-card>
+      <v-card class="pa-3" dark>
         <h1>Delete A Rocket</h1>
         <v-flex xs12>
           <v-text-field v-model="id" label="ID" required></v-text-field>
