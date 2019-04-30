@@ -12,6 +12,7 @@
       <v-tab ripple>REST Delete Rocket</v-tab>
       <v-tab ripple>REST Update Rocket</v-tab>
 
+<!-- GQL Show All -->
       <v-tab-item>
         <v-card flat>
           <v-card-text>
@@ -19,6 +20,7 @@
           </v-card-text>
         </v-card>
       </v-tab-item>
+      <!-- GQL Create Rocket -->
       <v-tab-item>
         <v-card flat>
           <v-card-text>
@@ -56,13 +58,13 @@
       <v-tab-item>
         <v-card flat>
           <v-card-text></v-card-text>
-          <RESTrocketUpdate/>
+          <RESTrocketDelete/>
         </v-card>
       </v-tab-item>
       <v-tab-item>
         <v-card flat>
           <v-card-text></v-card-text>
-          <RESTrocketDelete/>
+          <RESTrocketUpdate/>
         </v-card>
       </v-tab-item>
       
