@@ -64,7 +64,7 @@
       <v-tab-item>
         <v-card flat>
           <v-card-text></v-card-text>
-          <RESTrocketUpdate/>
+          <RESTrocketUpdate />
         </v-card>
       </v-tab-item>
       
@@ -83,6 +83,7 @@ import GQLrocketDelete from "./components/GQLrocketDelete";
 import RESTrocketAll from "./components/RESTrocketAll";
 import RESTrocketCreate from "./components/RESTrocketCreate";
 import RESTrocketDelete from "./components/RESTrocketDelete";
+import RESTrocketUpdate from "./components/RESTrocketUpdate";
 
 export default {
   data() {
@@ -102,7 +103,8 @@ export default {
 
     RESTrocketAll,
     RESTrocketCreate,
-    RESTrocketDelete
+    RESTrocketDelete,
+    RESTrocketUpdate,
   },
   methods: {}
 };

@@ -1,7 +1,7 @@
 <template>
       <div class="about">
         <v-container>
-          <v-card>
+          <v-card class="pa-3" dark>
             <h1>Update An rocket from REST</h1>
             <v-layout row wrap>
             <v-flex xs6>
