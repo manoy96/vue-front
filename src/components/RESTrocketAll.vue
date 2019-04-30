@@ -29,6 +29,7 @@ export default {
         axios
         .get('https://sleepy-taiga-70117.herokuapp.com/products/all')
         .then((res) => {
+            console.log(res);
             this.rockets = res.data
         })
         .catch(error => console.log(error))

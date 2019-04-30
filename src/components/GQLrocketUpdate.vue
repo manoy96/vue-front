@@ -49,7 +49,7 @@ export default {
       kgGto: "",
       url: ""
     },
-    returneditem: {}
+    returneditem: null
   }),
   methods: {
     submitUpdate: function() {

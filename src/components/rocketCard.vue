@@ -1,13 +1,13 @@
 <template>
    <v-card flat tile style="border:1px solid #ccc;margin: 10px;">
         <v-img :src="rocket.url" height="400px" class="black--text" style="text-align: center;background-color:#F0F0F0;">
-            <h2 class="headline mb-0">{{ rocket.name }}</h2>
+            <!-- <h2 class="headline mb-0" color="#ffffff">{{ rocket.name }}</h2> -->
         </v-img>
         <v-card-title primary-title color="blue-grey darken-2">
             <div>
                 <ul>
                   <li>rocket ID: {{ rocket.id }}</li>
-                  <b></b>
+                    <br>
                     <li>Name: {{ rocket.name }}</li>
                     <br>
                     <li>Country: {{ rocket.country }} </li>
@@ -40,3 +40,10 @@ export default {
   }
 };
 </script>
+
+<style scoped>
+ul li {
+  list-style-type: none;
+}
+</style>
+

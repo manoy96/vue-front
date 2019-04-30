@@ -20,7 +20,7 @@ export default {
     item: {
         id: ""
     },
-    returneditem: {}
+    returneditem: null
   }),
   methods: {
     submitDelete: function() {
