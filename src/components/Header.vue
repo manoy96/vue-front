@@ -1,6 +1,6 @@
 <template>
   <div class="header">
-    <v-toolbar color="blue-grey darken-2" app>
+    <v-toolbar my-5 color="blue-grey darken-2" app>
       <v-layout justify-start align-center class="pa-2 my-2">
         <v-toolbar-title class="font-weight-regular display-2 white--text">Rockets</v-toolbar-title>
       </v-layout>
